@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rexz Official - File Upload Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Rexz Official</h1>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="upload-card">
+            <div class="card-header">
+                <h2>Upload File</h2>
+                <p>Drag & drop file atau klik untuk memilih</p>
+            </div>
+
+            <!-- Upload Zone -->
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-content">
+                    <div class="upload-icon">📁</div>
+                    <p class="upload-text">Drop file di sini atau <span class="browse-text">browse</span></p>
+                    <p class="upload-hint">Support: Gambar, Video, Audio, PDF, ZIP, RAR (Max 100MB)</p>
+                </div>
+                <input type="file" id="fileInput" multiple style="display: none;">
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container" id="progressContainer" style="display: none;">
+                <div class="progress-info">
+                    <span id="progressText">Mengupload...</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-stats" id="progressStats"></div>
+            </div>
+
+            <!-- File Preview -->
+            <div class="preview-container" id="previewContainer"></div>
+
+            <!-- Result Area -->
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <h3>Upload Berhasil! 🎉</h3>
+                <div class="result-info">
+                    <p><strong>URL Permanen:</strong></p>
+                    <div class="url-container">
+                        <input type="text" id="fileUrl" readonly class="url-input">
+                        <button class="copy-btn" id="copyBtn">Copy</button>
+                    </div>
+                    <div class="file-details" id="fileDetails"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Rexz Official. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
